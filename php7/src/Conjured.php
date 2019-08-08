@@ -15,22 +15,9 @@ namespace App;
  */
 class Conjured extends Item {
     //put your code here
+    const DEGRADE_QUALITY = 2;
+
     public function __construct( $sell_in, $quality ) {
         parent::__construct( "Conjured Mana Cake", $sell_in, $quality);
     }
-    
-    public function updateItemQuality()
-    {
-        if ($this->quality > 0) {
-            $this->quality = $this->quality - 2;
-        }
-        $this->sell_in = $this->sell_in - 1;
-
-        if ($this->sell_in < 0) {
-            if ($this->quality > 0) {
-                $this->quality = $this->quality - 2;
-            }
-        } 
-    }
-    
 }

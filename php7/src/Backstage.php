@@ -21,15 +21,15 @@ class Backstage extends Item {
     
     public function updateItemQuality()
     {
-        if ($this->quality < 50) {
+        if ($this->quality < self::MAX_QUALITY) {
             $this->quality = $this->quality + 1;
             if ($this->sell_in < 11) {
-                if ($this->quality < 50) {
+                if ($this->quality < self::MAX_QUALITY) {
                     $this->quality = $this->quality + 1;
                 }
             }
             if ($this->sell_in < 6) {
-                if ($this->quality < 50) {
+                if ($this->quality < self::MAX_QUALITY) {
                     $this->quality = $this->quality + 1;
                 }
             }

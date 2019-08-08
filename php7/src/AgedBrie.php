@@ -21,14 +21,14 @@ class AgedBrie extends Item {
     
     public function updateItemQuality()
     {
-        if ($this->quality < 50) {
+        if ($this->quality < self::MAX_QUALITY ) {
             $this->quality = $this->quality + 1;
         }
 
         $this->sell_in = $this->sell_in - 1;
 
         if ($this-> sell_in < 0) {
-            if ($this->quality < 50) {
+            if ($this->quality < self::MAX_QUALITY ) {
                 $this->quality = $this->quality + 1;
             }
         }
