@@ -9,7 +9,7 @@
 namespace App;
 
 /**
- * Description of AgedBie
+ * Description of Sulfuras
  *
  * @author vvb
  */
